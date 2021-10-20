@@ -33,5 +33,35 @@ c.strokeStyle = "rgba(.1, 255, 34, .9)";
 c.stroke();
 
 // Arc || Circle
-c.arc(300, 300, 30, )
+// c.arc(x, y, radius, startAngle(radians), endAngle(radians), counterClockwise: true or false)
 
+// c.beginPath();
+// c.arc(300, 300, 30, 0 , Math.PI * 2, false);
+// c.strokeStyle = "blue";
+// c.stroke();
+
+let x;
+let y;
+
+let r;
+let g;
+let b;
+let a;
+
+
+
+for(let i = 0; i <= 100; i++) {
+    x = Math.floor(Math.random() * window.innerWidth);
+    y = Math.floor(Math.random() * window.innerHeight);
+
+    r = Math.floor(Math.random() * 256);
+    g = Math.floor(Math.random() * 256);
+    b = Math.floor(Math.random() * 256);
+    a = Math.random();
+
+    c.beginPath();
+    c.arc(x, y, 30, 0 , Math.PI * 2, false);
+    c.strokeStyle = `rgba(${r}, ${g}, ${b}, ${a})`;
+    
+    c.stroke();
+}
